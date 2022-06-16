@@ -10,7 +10,6 @@ class Food extends Product {
     }
     public function isAvailable() {
         $today = new \DateTime('midnight');
-        
         return parent::isAvailable() && $today < $this->expiration ;
     }
 

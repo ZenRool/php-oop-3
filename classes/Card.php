@@ -12,7 +12,12 @@ class Card {
         return $this->balance;
     }
     public function spent($price) {
-        $this->balance -= $price;
+        if($this->balance < $price) {
+            throw new Exception("Errore nel pagamento");
+        }
+        else {
+            $this->balance -= $price;
+        }
     }
 }
 ?>
