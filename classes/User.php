@@ -1,4 +1,5 @@
 <?php
+require_once "./traits/Origin.php";
 class User {
     public $name;
     public $lastname;

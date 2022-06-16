@@ -1,5 +1,8 @@
 <?php
+require_once "./traits/Origin.php";
 class Product {
+    use Origin;
+
     public $name;
     public $price;
     public $availability;
